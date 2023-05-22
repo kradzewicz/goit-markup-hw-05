@@ -20,8 +20,10 @@
         <nav class="flex-list">
           <a href="index.html" class="main-logo">Web<span class="color-black">Studio</span></a>
           <ul>
-            <li><a href="index.html" class="nav-links">Agencja</a></li>
-            <li><a href="portfolio.html" class="nav-links">Portfolio</a></li>
+            <li class="nav-links-underline"><a href="index.html" class="nav-links">Agencja</a></li>
+            <li>
+              <a href="portfolio.html" class="nav-links">Portfolio</a>
+            </li>
             <li><a href="#Contact" class="nav-links">Kontakt</a></li>
           </ul>
         </nav>
@@ -49,7 +51,16 @@
       <div class="service-section section">
         <div class="container">
           <h1 class="service-text">EFEKTYWNE ROZWIĄZANIA <br />DLA WASZEGO BIZNESU</h1>
-          <button type="button" class="service-button">Zamów usługę</button>
+          <button data-modal-open type="button" class="service-button">Zamów usługę</button>
+          <div data-modal class="backdrop is-hidden">
+            <div class="modal-window">
+              <button data-modal-close class="close-button" type="button">
+                <svg class="icon-close">
+                  <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <section class="info-section section">
@@ -103,29 +114,32 @@
           <h2 class="section-header">Czym się zajmujemy</h2>
 
           <ul class="flex-list">
-            <li>
+            <li class="img-container">
               <img
                 src="images/example_1.jpg"
                 alt="Pisanie kodu na klawiaturze"
                 width="370"
                 height="294"
               />
+              <p class="img-description">APLIKACJE KOMPUTEROWE</p>
             </li>
-            <li>
+            <li class="img-container">
               <img
                 src="images/example_2.jpg"
                 alt="Wybieranie szablonu menu aplikacji"
                 width="370"
                 height="294"
               />
+              <p class="img-description">APLIKACJE MOBILNE</p>
             </li>
-            <li>
+            <li class="img-container">
               <img
                 src="images/example_3.jpg"
                 alt="Oglądanie grafiki na tablecie"
                 width="370"
                 height="294"
               />
+              <p class="img-description">ROZWIĄZANIA GRAFICZNE</p>
             </li>
           </ul>
         </div>
@@ -379,5 +393,6 @@
         </div>
       </div>
     </footer>
+    <script src="./modal.js"></script>
   </body>
 </html>
