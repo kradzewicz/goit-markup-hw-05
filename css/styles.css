@@ -267,6 +267,10 @@ nav ul {
   position: relative;
 }
 
+.img-container img {
+  display: block;
+}
+
 .img-description {
   position: absolute;
   width: 100%;
